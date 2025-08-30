@@ -1,4 +1,6 @@
 ---
+import ServerTime from "../components/ServerTime.astro";
+import ServerTimeFB from "../components/ServerTimeFB.astro";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 ---
@@ -9,10 +11,13 @@ const siteDesc = "Trial cloudflare";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="{siteDesc}">
+		<meta name="description" content={siteDesc}>
 		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<h1>{pageTitle}</h1>
+		<ServerTime server:defer>
+			<ServerTimeFB slot="fallback"/>
+		</ServerTime>
 	</body>
 </html>
