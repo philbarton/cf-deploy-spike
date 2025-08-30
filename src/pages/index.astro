@@ -1,6 +1,6 @@
 ---
-import ServerTime from "../components/ServerTime.astro";
-import ServerTimeFB from "../components/ServerTimeFB.astro";
+import Quote from "../components/Quote.astro";
+import QuotePlaceholder from "../components/QuotePlaceholder.astro";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 ---
@@ -16,8 +16,8 @@ const siteDesc = "Trial cloudflare";
 	</head>
 	<body>
 		<h1>{pageTitle}</h1>
-		<ServerTime server:defer>
-			<ServerTimeFB slot="fallback"/>
-		</ServerTime>
+		<Quote server:defer>
+			<QuotePlaceholder slot="fallback"/>
+		</Quote>
 	</body>
 </html>
