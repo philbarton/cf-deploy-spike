@@ -25,8 +25,8 @@ const siteDesc = "Trial cloudflare";
 	<Satisfaction/>
 		<ul>
 			<li>`env : {import.meta.env.PROD}`</li>
-			<li>`API_URL env : {import.meta.env.PUBLIC_API_URL}`</li>
-			<li>`SECRET_KEY env : {import.meta.env.SECRET_KEY}`</li>
+			<li>`API_URL env : {Astro.locals.runtime.env.PUBLIC_API_URL}`</li>
+			<li>`SECRET_KEY env : {Astro.locals.runtime.env.SECRET_KEY}`</li>
 		</ul>
 	</body>
 </html>
