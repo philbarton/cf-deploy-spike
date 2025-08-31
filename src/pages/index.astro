@@ -1,6 +1,9 @@
 ---
 import Quote from "../components/Quote.astro";
 import QuotePlaceholder from "../components/QuotePlaceholder.astro";
+import Contact from "../components/Contact.astro";
+import Satisfaction from "../components/Satisfaction.astro";
+import {API_SECRET} from "astro:env/server";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 ---
@@ -19,5 +22,8 @@ const siteDesc = "Trial cloudflare";
 		<Quote server:defer>
 			<QuotePlaceholder slot="fallback"/>
 		</Quote>
+	<Contact/>
+	<Satisfaction/>
+		`Bearer {API_SECRET}`
 	</body>
 </html>

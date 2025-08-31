@@ -1,11 +1,16 @@
 ---
+import { API_URL } from "astro:env/client";
+import { API_SECRET } from "astro:env/server";
+
+
+// noinspection JSUnusedGlobalSymbols
 export const prerender = false
 
 interface Quote {
     quote: string;
     id: number;
 }
-async function getData() {
+async function getQuote() {
     try {
         const response = await fetch('https://dummyjson.com/quotes/random');
         const data = (await response.json() as Quote);
@@ -16,10 +21,12 @@ async function getData() {
     }
 }
 
-const now = await getData();
+const quote = await getQuote();
 //const now = new Date().toLocaleTimeString();
 ---
 <div class="p-3 bg-gray-100 rounded">
-    💬 Quote: {now}
+    💬 Quote: {quote}
+    `API_SECRET {API_SECRET}`
+    `API_URL {API_URL}/users`
 </div>
 

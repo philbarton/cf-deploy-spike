@@ -1,0 +1,28 @@
+---
+const url = Astro.url; // URL object
+const pathname = url.pathname;
+const fullUrl = url.toString();
+
+---
+<h2>"Url {fullUrl}"</h2>
+<h2>"Path {pathname}"</h2>
+
+<form action="https://submit-form.com/tVmato4zK">
+    <input
+            type="hidden"
+            name="_redirect"
+            value={fullUrl}
+    />
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name" required="" />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" required="" />
+    <label for="message">Message</label>
+    <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            required=""
+    ></textarea>
+    <button type="submit">Send</button>
+</form>

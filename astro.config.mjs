@@ -1,10 +1,17 @@
 // @ts-check
-import {defineConfig} from 'astro/config';
+import {defineConfig, envField} from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
+    env: {
+        schema: {
+            API_URL: envField.string({ context: "client", access: "public", optional: true, default: "URL_Default" }),
+            PORT: envField.number({ context: "server", access: "public", default: 4321 }),
+            API_SECRET: envField.string({ context: "server", access: "secret", default: "default" }),
+        }
+    },
     vite: {
         ssr: {
             // Treat Node built-ins as external for SSR
