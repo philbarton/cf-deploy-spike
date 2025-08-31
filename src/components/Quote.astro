@@ -1,6 +1,8 @@
 ---
 
 // noinspection JSUnusedGlobalSymbols
+
+import Env from "./Env.astro";
 export const prerender = false
 
 interface Quote {
@@ -24,10 +26,4 @@ const quote = await getQuote();
 <div class="p-3 bg-gray-100 rounded">
     💬 Quote: {quote}
  </div>
-<ul>
-    <li>`env : {import.meta.env.PROD}`</li>
-    <li>`API_URL env : {Astro.locals.runtime.env.PUBLIC_API_URL}`</li>
-    <li>`SECRET_KEY env : {Astro.locals.runtime.env.SECRET_KEY}`</li>
-</ul>
-
-
+<Env/>

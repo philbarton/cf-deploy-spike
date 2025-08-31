@@ -3,6 +3,7 @@ import Quote from "../components/Quote.astro";
 import QuotePlaceholder from "../components/QuotePlaceholder.astro";
 import Contact from "../components/Contact.astro";
 import Satisfaction from "../components/Satisfaction.astro";
+import Env from "../components/Env.astro";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 ---
@@ -23,10 +24,6 @@ const siteDesc = "Trial cloudflare";
 		</Quote>
 	<Contact/>
 	<Satisfaction/>
-		<ul>
-			<li>`env : {import.meta.env.PROD}`</li>
-			<li>`API_URL env : {Astro.locals.runtime.env.PUBLIC_API_URL}`</li>
-			<li>`SECRET_KEY env : {Astro.locals.runtime.env.SECRET_KEY}`</li>
-		</ul>
+	<Env/>
 	</body>
 </html>
