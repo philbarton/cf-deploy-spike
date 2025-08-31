@@ -3,7 +3,8 @@ import Quote from "../components/Quote.astro";
 import QuotePlaceholder from "../components/QuotePlaceholder.astro";
 import Contact from "../components/Contact.astro";
 import Satisfaction from "../components/Satisfaction.astro";
-import {API_SECRET} from "astro:env/server";
+import { API_URL } from "astro:env/client";
+import { API_SECRET } from "astro:env/server";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 ---
@@ -24,6 +25,7 @@ const siteDesc = "Trial cloudflare";
 		</Quote>
 	<Contact/>
 	<Satisfaction/>
-		`Bearer {API_SECRET}`
+		`API_URL {API_URL}`
+		`API_SECRET {API_SECRET}`
 	</body>
 </html>
