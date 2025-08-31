@@ -1,7 +1,4 @@
 ---
-import { API_URL } from "astro:env/client";
-import { API_SECRET } from "astro:env/server";
-
 
 // noinspection JSUnusedGlobalSymbols
 export const prerender = false
@@ -27,9 +24,5 @@ const quote = await getQuote();
 <div class="p-3 bg-gray-100 rounded">
     💬 Quote: {quote}
  </div>
-<ul>
-    <li>`API_URL env : {import.meta.env.API_URL}`</li>
-    <li>`API_SECRET env : {import.meta.env.API_SECRET}`</li>
-</ul>
 
 
