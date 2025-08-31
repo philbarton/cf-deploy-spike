@@ -3,7 +3,8 @@ import Quote from "../components/Quote.astro";
 import QuotePlaceholder from "../components/QuotePlaceholder.astro";
 import Contact from "../components/Contact.astro";
 import Satisfaction from "../components/Satisfaction.astro";
-import Env from "../components/Env.astro";
+import ServerEnv from "../components/ServerEnv.astro";
+import ClientEnv from "../components/ClientEnv.astro";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
 const apiUrl = import.meta.env.PUBLIC_API_URL;
@@ -25,7 +26,6 @@ const apiUrl = import.meta.env.PUBLIC_API_URL;
 		</Quote>
 	<Contact/>
 	<Satisfaction/>
-	<Env/>
-		`API_URL env : {apiUrl}`
+	<ClientEnv/>
 	</body>
 </html>
