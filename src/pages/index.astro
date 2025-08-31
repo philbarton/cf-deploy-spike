@@ -6,6 +6,7 @@ import Satisfaction from "../components/Satisfaction.astro";
 import Env from "../components/Env.astro";
 const pageTitle = "Home Page V2";
 const siteDesc = "Trial cloudflare";
+const apiUrl = import.meta.env.PUBLIC_API_URL;
 ---
 
 <html lang="en">
@@ -25,5 +26,6 @@ const siteDesc = "Trial cloudflare";
 	<Contact/>
 	<Satisfaction/>
 	<Env/>
+		`API_URL env : {apiUrl}`
 	</body>
 </html>
